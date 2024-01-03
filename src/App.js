@@ -41,7 +41,7 @@ function App() {
           <div key={country.cca3} className="cardstyle">
             <img
               src={country.flags.png}
-              alt={`Flag of ${country.name.common}`}
+              alt={`Flag of ${country.name.common || "Unknown"}`}
               className="imageStyle"
             />
             <h2>{country.name.common}</h2>
