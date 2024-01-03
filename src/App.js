@@ -8,7 +8,7 @@ function App() {
     try {
       const res = await fetch("https://restcountries.com/v3.1/all");
       const data = await res.json();
-      console.log(data[0].name.common);
+      
       setCountries(data);
     } catch (error) {
       console.error("Error fetching countries:", error);
