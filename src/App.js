@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const [countries, setCountries] = useState([]);
-  const [searchQuery, setSearchQuery] = useState();
+  const [searchQuery, setSearchQuery] = useState("");
   const getCountries = async () => {
     try {
       const res = await fetch("https://restcountries.com/v3.1/all");
