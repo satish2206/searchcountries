@@ -24,6 +24,13 @@ function App() {
         country.name.common.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : countries;
+    const containerStyle = {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+    };
 
   return (
     <div className="App">
@@ -36,7 +43,7 @@ function App() {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
-      <div className="containerStyle">
+      <div style={containerStyle}>
         {filteredCountries.map((country) => (
           <div key={country.cca3} className="cardstyle">
             <img
