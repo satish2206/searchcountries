@@ -24,12 +24,29 @@ function App() {
         country.name.common.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : countries;
+    const cardStyle = {
+      width: "200px",
+      border: "1px solid #ccc",
+      borderRadius: "10px",
+      margin: "10px",
+      padding: "10px",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+    };
+  
     const containerStyle = {
       display: "flex",
       flexWrap: "wrap",
       justifyContent: "center",
       alignItems: "center",
       height: "100vh",
+    };
+  
+    const imageStyle = {
+      width: "100px",
+      height: "100px",
     };
 
   return (
@@ -45,11 +62,11 @@ function App() {
       </div>
       <div style={containerStyle}>
         {filteredCountries.map((country) => (
-          <div key={country.cca3} className="cardstyle">
+          <div key={country.cca3} style={cardStyle}>
             <img
               src={country.flags.png}
               alt={`Flag of ${country.name.common || "Unknown"}`}
-              className="imageStyle"
+              style={imageStyle}
             />
             <h2>{country.name.common}</h2>
           </div>
